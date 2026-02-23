@@ -1,0 +1,5 @@
+export { default as MainMenu } from './MainMenu.jsx'
+export { default as GameScreen } from './GameScreen.jsx'
+export { default as Results } from './Results.jsx'
+export { default as About } from './About.jsx'
+export { default as RestartEnd } from './RestartEnd.jsx'

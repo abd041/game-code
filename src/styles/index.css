@@ -1,0 +1,188 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* App container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Screen transition: fade in when screen changes */
+.screen-transition {
+  width: 100%;
+  max-width: 36rem;
+  margin: 0 auto;
+  animation: screenFadeIn 0.3s ease-out forwards;
+}
+
+@keyframes screenFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Screens */
+.screen {
+  max-width: 36rem;
+  width: 100%;
+  text-align: center;
+}
+
+.screen__title {
+  margin: 0 0 0.5rem;
+  font-size: 1.75rem;
+}
+
+.screen__subtitle {
+  margin: 0 0 2rem;
+  color: #666;
+  font-size: 1rem;
+}
+
+.screen__narrative {
+  margin: 0 0 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+.screen__progress {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.screen__content {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.screen__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Choices list */
+.choices {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+/* Buttons */
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  min-width: 12rem;
+  transition: opacity 0.15s;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:active {
+  opacity: 0.8;
+}
+
+.btn--primary {
+  background: #2563eb;
+  color: white;
+}
+
+.btn--secondary {
+  background: #e5e7eb;
+  color: #1f2937;
+}
+
+.btn--choice {
+  background: #f3f4f6;
+  color: #1f2937;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+}
+
+.btn--choice:hover {
+  background: #e5e7eb;
+}
+
+/* Results */
+.results__dominant {
+  margin: 0 0 1.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  text-align: center;
+}
+
+.results__score {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.results__subtitle {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+}
+
+.results__traits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  justify-content: center;
+}
+
+.results__trait {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: #f3f4f6;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+}
+
+.results__trait-name {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+.results__trait-value {
+  font-weight: 600;
+  min-width: 1.5rem;
+  text-align: center;
+}
